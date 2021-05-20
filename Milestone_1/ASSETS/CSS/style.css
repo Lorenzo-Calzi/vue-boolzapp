@@ -142,6 +142,7 @@ body{
 .chats{
     height: 70%;
     background-color: rgba(250, 250, 250, 1);
+    overflow: auto;
 }
 .chat{
     display: flex;
@@ -165,6 +166,7 @@ body{
     background-image: url(/Milestone_1/IMG/mine.jpg);
     display: flex;
     justify-content: center;
+    overflow: auto;
 }
 .content_left{
     width: 50%;

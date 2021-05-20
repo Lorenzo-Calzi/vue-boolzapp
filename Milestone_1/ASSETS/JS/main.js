@@ -96,14 +96,8 @@ const app = new Vue({
         ]
     },
 
-    method: {
+    methods: {
         
-        addMessage() {
-           
-                this.prova.push(this.newMessage)
-                this.newMessage = '';
-                console.log(newMessage);
-        },
     }
 });
 
