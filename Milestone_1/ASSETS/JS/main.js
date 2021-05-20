@@ -2,6 +2,13 @@ const app = new Vue({
     el: "#app",
 
     data: {
+
+        newMessage: [
+
+        ],
+
+        prova: ['ciao'],
+
         contacts: [
             {
                 name: 'Michele',
@@ -90,6 +97,13 @@ const app = new Vue({
     },
 
     method: {
+        
+        addMessage() {
+           
+                this.prova.push(this.newMessage)
+                this.newMessage = '';
+                console.log(newMessage);
+        },
     }
 });
 

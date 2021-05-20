@@ -163,11 +163,41 @@ body{
     top: 15%;
     right: 0;
     background-image: url(/Milestone_1/IMG/mine.jpg);
+    display: flex;
+    justify-content: center;
+}
+.content_left{
+    width: 50%;
+    height: 100%;
+    margin: 40px;
+}
+.content_right{
+    width: 50%;
+    height: 100%;
+    margin: 40px;
+}
+.message_left{
+    margin-top: 120px;
+} 
+.message_left span{
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: white;
+}
+.message_right{
+    margin-top: 20px;
+}
+.message_right span{
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(213, 249, 186, 1);
 }
 /* /CONTENT */
 
 /* MESSAGE BAR */
-.message_bar{
+.text_bar{
     width: calc(100% - 35%);
     height: 13%;
     background-color: rgba(243, 238, 234, 1);
@@ -178,12 +208,12 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.message_bar i{
+.text_bar i{
     font-size: 35px;
     padding: 30px;
     color: rgba(107, 115, 118, 1);
 }
-.message_bar input{
+.text_bar input{
     padding: 23px;
     width: 80%;
     border-radius: 7px;

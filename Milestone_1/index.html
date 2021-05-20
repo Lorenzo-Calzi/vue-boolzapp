@@ -28,8 +28,8 @@
                 <!-- User -->
                 <div class="user">
                     <div class="user_left">
-                        <img class="avatar" src="./IMG/avatar_5.jpg" alt="Immagine Avatar">
-                        <h3>Lorenzo Calzi</h3>
+                        <img class="avatar" src="./IMG/avatar_io.jpg" alt="Immagine Avatar">
+                        <h3>Lorenza Calzi</h3>
                     </div>
     
                     <div class="user_right">
@@ -97,15 +97,26 @@
     
             <!-- CONTENT -->
             <div class="content">
-    
+                <div class="content_left">
+                    <div class="message_left">
+                        <span>Hai portato a spasso il cane?</span>
+                    </div>
+                </div>
+                
+                <div class="content_right">
+                    <div class="message_right">
+                        <span>Hai portato a spasso il cane?</span>
+                    </div>
+                </div>
             </div>
             <!-- /CONTENT -->
     
             <!-- MESSAGE BAR -->
-            <div class="message_bar">
+            <div class="text_bar">
     
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input v-model="newMessage" placeholder="Scrivi un messaggio" @keyup.enter="addMessage">
+                <button @click="addMessage">Add</button>
                 <i class="fas fa-microphone"></i>
             </div>
             <!-- /MESSAGE BAR -->
