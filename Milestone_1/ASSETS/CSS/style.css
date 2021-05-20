@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background-color: rgba(219, 219, 211, 1);
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+}
+
+.container_site{
+    width: 85%;
+    height: 95vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+}
+
+.site_top{
+    height: 15%;
+    width: 100%;
+    position: fixed;
+    background-color: green;
+}
+.sidebar{
+    width: 35%;
+    height: calc(100% - 15%);
+    background-color: yellow;
+    position: fixed;
+    bottom: 0;
+}
+.content{
+    width: calc(100% - 35%);
+    height: calc(100% - 30%);
+    background-color: indigo;
+    position: absolute;
+    top: 15%;
+    right: 0;
+}
+.message_bar{
+    width: calc(100% - 35%);
+    height: 15%;
+    background-color: blue;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
