@@ -24,6 +24,7 @@ body{
 }
 .green_wallpaper{
     background-color: rgba(0, 150, 136, 1);
+    /* background-image: linear-gradient(to bottom, #009688 0px, #009688 100px, #d3d3d3 100px, #d3d3d3 100%); */
     height: 16.7%;
 }
 /* /GENERAL RULES */
@@ -136,6 +137,13 @@ body{
     font-size: 20px;
     margin-left: 30px;
 }
+.search input{
+    width: 75%;
+    color: rgba(117, 117, 117, 1);
+    font-size: 20px;
+    margin-left: 30px;
+    border: none;
+}
 /* /Search */
 
 /* Chat */
@@ -163,7 +171,7 @@ body{
     position: absolute;
     top: 15%;
     right: 0;
-    background-image: url(/Milestone_1/IMG/mine.jpg);
+    background-image: url(/vue-boolzapp/Milestone_1/IMG/mine.jpg);
     display: flex;
     justify-content: center;
     overflow: auto;

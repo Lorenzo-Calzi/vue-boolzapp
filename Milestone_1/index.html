@@ -79,15 +79,20 @@
                 <!-- Search -->
                 <div class="search">
                     <i class="fas fa-search"></i> 
-                    <span>Cerca o inizia una nuova chat</span>
+                    <!-- <span>Cerca o inizia una nuova chat</span> -->
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!-- Search -->
     
                 <!-- Chats -->
                 <div class="chats">
-                    <div class="chat" v-for="(contact, index) in contacts">
+                    <div class="chat" v-for="(contact, index) in contacts" >
                         <img :src="contact.avatar" alt="" class="avatar">
                         <h2>{{contact.name}}</h2>
+
+
+                        <!-- <img :src="'./assets/img/avatar' + contact.avatar + jpg" alt=""> -->
+                        <!-- {{contacs{[currentContact].name}}} -->
                     </div>
                 </div>
                 <!-- Chats -->
