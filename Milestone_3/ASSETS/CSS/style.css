@@ -181,7 +181,7 @@ body{
     position: absolute;
     top: 15%;
     right: 0;
-    background-image: url(/Milestone_2/IMG/mine.jpg);
+    background-image: url('/Milestone_3/IMG/mine.jpg');
     justify-content: center;
     overflow: auto;
 }
@@ -198,7 +198,6 @@ body{
     font-size: 20px;
     background-color: white;
 }
-
 .content_right{
     margin: 40px;
 }

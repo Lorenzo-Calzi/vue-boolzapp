@@ -70,7 +70,7 @@
     
                 <!-- Notifications -->
                 <div class="notifications">
-                    <i class="fas fa-bell-slash" @click="prova"></i>
+                    <i class="fas fa-bell-slash"></i>
                     <div>
                         <h3>Ricevi notifiche di nuovi messaggi</h3>
                         <span>Attiva notifiche desktop</span>
@@ -103,7 +103,7 @@
             <div class="content" >
                 
                 <div class="content_right" v-for="message in contacts[contatto_corrente].messages">
-                    <div class="message_user"  >
+                    <div class="message_user"  v-if="message.status === 'sent'">
                         <div class="message_right">
                             <span>{{message.text}}</span>
                             <h5>{{message.date}}</h5>
