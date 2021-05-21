@@ -47,17 +47,10 @@
                         <img :src="contacts[contatto_corrente].avatar" alt="" class="avatar">
                         <div>
                             <h3>{{contacts[contatto_corrente].name}}</h3>
-                            <span>Ultimo accesso oggi alle</span>
+                            <span>Ultimo accesso oggi alle<span id="date"></span></span>
+                            <h3 id="hour"></h3>
                         </div>
-                        
-                        <div>
-                           
-                           <span id="date">
-                               <!-- {{timeStamp}} -->
-                           </span>
-
-                           <span id="hour"></span>
-                        </div>
+                
                     </div>
     
                     <div class="user_right">
@@ -77,7 +70,7 @@
     
                 <!-- Notifications -->
                 <div class="notifications">
-                    <i class="fas fa-bell-slash"></i>
+                    <i class="fas fa-bell-slash" @click="prova"></i>
                     <div>
                         <h3>Ricevi notifiche di nuovi messaggi</h3>
                         <span>Attiva notifiche desktop</span>
@@ -110,7 +103,7 @@
             <div class="content" >
                 
                 <div class="content_right" v-for="message in contacts[contatto_corrente].messages">
-                    <div class="message_user"  v-if="message.status === 'sent'">
+                    <div class="message_user"  >
                         <div class="message_right">
                             <span>{{message.text}}</span>
                             <h5>{{message.date}}</h5>

@@ -12,7 +12,6 @@ const app = new Vue({
         newMessage: '',
 
         contatto_corrente: 0, 
-        prova: 0,
 
         contacts: [
             {
@@ -108,7 +107,6 @@ const app = new Vue({
             
         },
 
-
         addMessage() { 
             console.log(this.newMessage);
             let contattoAttivo = this.contacts[this.contatto_corrente];
@@ -127,9 +125,6 @@ const app = new Vue({
             }) ,1000)   
         },
 
-
-
-
         getDate() {
             const today = new Date();
             const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -139,32 +134,24 @@ const app = new Vue({
             console.log(this.timestamp);
         },
 
-        getHour() {
-            const today = new Date();
-            const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-            this.timestamp = time;
-            console.log(this.timeStamp);
-            document.getElementById('hour').innerHTML = this.timestamp;
-            console.log(this.timestamp);
-        }
-
-
     }
 });
 
 
-/* var data = new Date();
+/* Calcolo Data e Ora */
+var data = new Date();
 var Hh, Mm, Ss;
 Hh = data.getHours() + ":";
 Mm = data.getMinutes() + ":";
-Ss = data.getSeconds() + ":";
-document.write("Sono le ore " + Hh + Mm + Ss);
+Ss = data.getSeconds();
 
-document.querySelector("date").innerHTML = ("Sono le ore " + data)
-console.log(data); */
+Gg = '0' + data.getDay() + " ";
+Mh = '0' + data.getMonth() + " ";
+Ye = data.getFullYear();
 
-/* var data = new Date().toLocaleString()
-console.log(data); */
+document.getElementById('date').innerHTML = Gg + Mh + Ye;
+document.getElementById('hour').innerHTML = Hh + Mm + Ss;
+
 
 
 
