@@ -7,15 +7,7 @@ const app = new Vue({
             name: 'Me',
             avatar: '_Me',
             visible: true, 
-        }, 
-        
-        newMessage: [
-
-        ],
-
-        utenteAttivo: [
-
-        ],
+        },
 
 
         contatto_corrente: 0, 
@@ -118,22 +110,5 @@ const app = new Vue({
 
     }
 });
-
-
-/* var data = new Date();
-var Hh, Mm, Ss;
-Hh = data.getHours() + ":";
-Mm = data.getMinutes() + ":";
-Ss = data.getSeconds() + ":";
-document.write("Sono le ore " + Hh + Mm + Ss);
-
-document.querySelector("date").innerHTML = ("Sono le ore " + data)
-console.log(data); */
-
-/* var data = new Date().toLocaleString()
-console.log(data); */
-
-
-
 
 

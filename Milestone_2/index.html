@@ -45,13 +45,10 @@
     
                     <div class="user_left">
                         <img :src="contacts[contatto_corrente].avatar" alt="" class="avatar">
-
-                        <div class="chat" v-for="(contact, index) in contacts" @click="selectContact(index)" >
-                            <h3>{{contact.name}}</h3><!-- 
-                            <h5>Ultimo accesso alle</h5> -->
+                        <div>
+                            <h3>{{contacts[contatto_corrente].name}}</h3>
+                            <span>Ultimo accesso oggi alle</span>
                         </div>
-
-                        <span id="date"></span>
                     </div>
     
                     <div class="user_right">
