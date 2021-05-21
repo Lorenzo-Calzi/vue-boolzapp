@@ -3,8 +3,6 @@ const app = new Vue({
 
     data: {
 
-        currentContact: 0, 
-
         me: {
             name: 'Me',
             avatar: '_Me',
@@ -20,6 +18,7 @@ const app = new Vue({
         ],
 
 
+        contatto_corrente: 0, 
 
         contacts: [
             {

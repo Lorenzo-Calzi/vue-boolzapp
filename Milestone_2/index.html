@@ -43,7 +43,7 @@
                 <!-- Person Chat -->
                 <div class="person_chat">
     
-                    <div class="user_left" v-for="(element, index) in utenteAttivo" >
+                    <div class="user_left">
                         <!-- <img class="avatar" src="./IMG/avatar_1.jpg" alt="Immagine Avatar">
                         <div>
                             <h3>Michele</h3>
@@ -87,10 +87,12 @@
     
                 <!-- Chats -->
                 <div class="chats">
-                    <div class="chat" v-for="(contact, index) in contacts"
+                    <div class="chat" v-for="(contact, index) in contacts">
 
-                    @click="selectImage(index)"
-                    :class="currentContact === index ? 'active' : '' ">
+                        
+
+                    <!-- @click="selectImage(index)"
+                    :class="currentContact === index ? 'active' : '' " -->
 
                         <img :src="contact.avatar" alt="" class="avatar">
                         <h2>{{contact.name}}</h2>
@@ -105,14 +107,11 @@
             <!-- /SIDEBAR -->
             
             <!-- CONTENT -->
-            <div class="content" v-for="(message, index) in contacts">
+            <div class="content" v-for="message in contacts[contatto_corrente].messages">
                 
-                {{message.messages}}
-            
+                
 
-                <!-- <span>{{message}}</span> -->
-
-                <!-- <div class="content_left">
+                <div class="content_left">
                     
                     <div class="message_left">
                         <span>Si certo!<span>
@@ -121,9 +120,11 @@
                 
                 <div class="content_right">
                     <div class="message_right">
-                        <span>Hai portato a spasso il cane?</span>
+                        {{contacts[contatto_corrente].messages}}
+                        <!-- <span>Hai portato a spasso il cane?</span> -->
                     </div>
-                </div> -->
+                </div>
+                
             </div>
             <!-- /CONTENT -->
     
