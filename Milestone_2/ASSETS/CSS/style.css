@@ -136,6 +136,13 @@ body{
     font-size: 20px;
     margin-left: 30px;
 }
+.search input{
+    width: 75%;
+    color: rgba(117, 117, 117, 1);
+    font-size: 20px;
+    margin-left: 30px;
+    border: none;
+}
 /* /Search */
 
 /* Chat */
@@ -147,6 +154,10 @@ body{
 .chat{
     display: flex;
     padding: 20px;
+}
+.chat:hover{
+    cursor: pointer;
+    background-color: rgba(233, 235, 235, 1);
 }
 .chat h2{
     margin-left: 20px;
@@ -163,39 +174,50 @@ body{
     top: 15%;
     right: 0;
     background-image: url(/Milestone_2/IMG/mine.jpg);
-    /* display: flex; */
     justify-content: center;
     overflow: auto;
 }
 .content_left{
-    /* width: 50%; */
-    /* height: 100%; */
     margin: 40px;
 }
-.content_right{
-    /* width: 50%; */
-    /* height: 100%; */
-    margin: 40px;
-}
-.message_left{
-    margin-top: 80px;
+.message_answer{
+    display: flex;
+    justify-content: flex-start;
 } 
-.message_left span{
-    padding: 20px;
-    border-radius: 10px;
+.message_left{
+    padding: 20px 20px 10px 20px;
+    border-radius: 15px;
     font-size: 20px;
     background-color: white;
 }
-.message_right{
-    margin-top: 80px;
+
+.content_right{
+    margin: 40px;
 }
-.message_right span{
-    padding: 20px;
-    border-radius: 10px;
+.message_user{
+    display: flex;
+    justify-content: flex-end;
+}
+.message_right{
+    padding: 20px 20px 10px 20px;
+    border-radius: 15px;
     font-size: 20px;
     background-color: rgba(213, 249, 186, 1);
 }
 
+.message_left span,
+.message_right span{
+    font-size: 22px;
+}
+.message_left h5,
+.message_right h5{
+    padding-left: 120px;
+    padding-top: 5px;
+    text-align: right;
+    color: rgba(182, 185, 187, 1);
+    font-weight: 400;
+
+}
 /* /CONTENT */
 
 /* MESSAGE BAR */
