@@ -118,11 +118,13 @@ const app = new Vue({
                 status:'sent'
             })
             this.newMessage = ''
-            
-            // setTimout
-            // seleziono contatto attivo
-            // pusho
-            
+
+            setTimeout(() => 
+            contattoAttivo.messages.push({
+                date: '10/01/2020 15:50:00',
+                text: 'Ok',
+                status:'received'
+            }) ,1000)   
         },
 
 
