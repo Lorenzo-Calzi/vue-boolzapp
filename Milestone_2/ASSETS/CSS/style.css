@@ -159,27 +159,26 @@ body{
 .content{
     width: calc(100% - 35%);
     height: calc(100% - 28%);
-    background-color: indigo;
     position: absolute;
     top: 15%;
     right: 0;
     background-image: url(/Milestone_2/IMG/mine.jpg);
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     overflow: auto;
 }
 .content_left{
-    width: 50%;
-    height: 100%;
+    /* width: 50%; */
+    /* height: 100%; */
     margin: 40px;
 }
 .content_right{
-    width: 50%;
-    height: 100%;
+    /* width: 50%; */
+    /* height: 100%; */
     margin: 40px;
 }
 .message_left{
-    margin-top: 120px;
+    margin-top: 80px;
 } 
 .message_left span{
     padding: 20px;
@@ -188,7 +187,7 @@ body{
     background-color: white;
 }
 .message_right{
-    margin-top: 20px;
+    margin-top: 80px;
 }
 .message_right span{
     padding: 20px;
@@ -196,6 +195,7 @@ body{
     font-size: 20px;
     background-color: rgba(213, 249, 186, 1);
 }
+
 /* /CONTENT */
 
 /* MESSAGE BAR */

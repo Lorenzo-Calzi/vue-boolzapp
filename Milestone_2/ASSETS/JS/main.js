@@ -19,6 +19,7 @@ const app = new Vue({
 
 
         contatto_corrente: 0, 
+        prova: 0,
 
         contacts: [
             {
@@ -109,9 +110,9 @@ const app = new Vue({
 
     methods: {
 
-        selectImage(index){
+        selectContact(index){
             console.log('si');
-            return this.counter = index;
+            return this.contatto_corrente = index;
             
         }
 
@@ -131,14 +132,6 @@ console.log(data); */
 
 /* var data = new Date().toLocaleString()
 console.log(data); */
-
-
-/* activeContact(index, contact) {
-    this.utenteAttivo.push(this.contact.name);
-    console.log(this.contacts.name);
-    console.log(this.utenteAttivo);
-} */
-
 
 
 
