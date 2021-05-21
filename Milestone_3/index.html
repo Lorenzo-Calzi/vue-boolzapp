@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./ASSETS/CSS/style.css">
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css "integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w== "crossorigin="anonymous" />
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>Boolzapp</title>
+</head>
+<body>
+    
+    <div class="green_wallpaper"></div>
+
+    <div id="app">
+
+        <div class="container_site">
+    
+            <!-- SITE TOP -->
+            <div class="site_top">
+    
+                <!-- User -->
+                <div class="user">
+                    <div class="user_left" >
+                        <img class="avatar" src="./IMG/avatar_io.jpg" alt="Immagine Avatar">
+                        <h3>Lorenza Calzi</h3>
+                    </div>
+    
+                    <div class="user_right">
+                        <i class="fas fa-circle-notch"></i> 
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <!-- /User -->
+    
+                <!-- Person Chat -->
+                <div class="person_chat">
+    
+                    <div class="user_left" @click="getDate" @click="getHour">
+                        <img :src="contacts[contatto_corrente].avatar" alt="" class="avatar">
+                        <div>
+                            <h3>{{contacts[contatto_corrente].name}}</h3>
+                            <span>Ultimo accesso oggi alle</span>
+                        </div>
+                        
+                        <div>
+                           
+                           <span id="date">
+                               <!-- {{timeStamp}} -->
+                           </span>
+
+                           <span id="hour"></span>
+                        </div>
+                    </div>
+    
+                    <div class="user_right">
+                        <i class="fas fa-search"></i> 
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+    
+                </div>
+                <!-- /Person Chat -->
+    
+            </div>
+            <!-- /SITE TOP -->
+    
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+    
+                <!-- Notifications -->
+                <div class="notifications">
+                    <i class="fas fa-bell-slash"></i>
+                    <div>
+                        <h3>Ricevi notifiche di nuovi messaggi</h3>
+                        <span>Attiva notifiche desktop</span>
+                    </div>
+                </div>
+                <!-- /Notifications -->
+    
+                <!-- Search -->
+                <div class="search">
+                    <i class="fas fa-search"></i> 
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <!-- Search -->
+    
+                <!-- Chats -->
+                <div class="chats">
+                    <div class="chat" v-for="(contact, index) in contacts" @click="selectContact(index)" >
+           
+                        <img :src="contact.avatar" alt="" class="avatar">
+                        <h2>{{contact.name}}</h2>
+
+                    </div>
+                </div>
+                <!-- Chats -->
+    
+            </div>
+            <!-- /SIDEBAR -->
+            
+            <!-- CONTENT -->
+            <div class="content" >
+                
+                <div class="content_right" v-for="message in contacts[contatto_corrente].messages">
+                    <div class="message_user"  v-if="message.status === 'sent'">
+                        <div class="message_right">
+                            <span>{{message.text}}</span>
+                            <h5>{{message.date}}</h5>
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="content_left"  v-for="message in contacts[contatto_corrente].messages" >
+                    <div class="message_answer" v-if="message.status === 'received'">
+                        <div class="message_left">
+                            <span>{{message.text}}</span>
+                            <h5>{{message.date}}</h5>
+                        </div>
+                    </div>
+                </div>
+                  
+            </div>
+            <!-- /CONTENT -->
+    
+            <!-- MESSAGE BAR -->
+            <div class="text_bar">
+                <i class="far fa-smile"></i>
+                <input v-model="newMessage" placeholder="Scrivi un messaggio" @keyup.enter="addMessage">
+                <i class="fas fa-microphone"></i>
+            </div>
+            <!-- /MESSAGE BAR -->
+    
+        </div>
+
+    </div>
+
+
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Main JS -->
+    <script src="./ASSETS/JS/main.js"></script>
+
+</body>
+</html>
