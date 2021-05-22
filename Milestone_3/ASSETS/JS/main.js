@@ -155,5 +155,3 @@ document.getElementById('hour').innerHTML = Hh + Mm + Ss;
 
 
 
-
-
