@@ -125,15 +125,6 @@ const app = new Vue({
             }) ,1000)   
         },
 
-        getDate() {
-            const today = new Date();
-            const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-            this.timestamp = date;
-
-            document.getElementById('date').innerHTML = this.timestamp;
-            console.log(this.timestamp);
-        },
-
     }
 });
 

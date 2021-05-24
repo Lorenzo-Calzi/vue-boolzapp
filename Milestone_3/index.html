@@ -43,14 +43,13 @@
                 <!-- Person Chat -->
                 <div class="person_chat">
     
-                    <div class="user_left" @click="getDate" @click="getHour">
+                    <div class="user_left">
                         <img :src="contacts[contatto_corrente].avatar" alt="" class="avatar">
                         <div class="person">
                             <h3>{{contacts[contatto_corrente].name}}</h3>
                             <span>Ultimo accesso oggi alle<span id="date"></span></span>
                             <h3 id="hour"></h3>
                         </div>
-                
                     </div>
     
                     <div class="user_right">
@@ -87,18 +86,10 @@
     
                 <!-- Chats -->
                 <div class="chats">
-                    <div class="chat" v-for="(contact, index) in contacts" @click="selectContact(index)" >
+                    <div class="chat" :class="contatto_corrente === index ? 'active' : '' " v-for="(contact, index) in contacts" @click="selectContact(index)" >
            
                         <img :src="contact.avatar" alt="" class="avatar">
                         <h2>{{contact.name}}</h2>
-
-
-                        <div v-for="message in contacts[contatto_corrente].messages">
-
-                            <span>{{message.text}}</span>
-                            <h5>{{message.date}}</h5>
-                        </div>
-                        
                         
                     </div>
                 </div>
