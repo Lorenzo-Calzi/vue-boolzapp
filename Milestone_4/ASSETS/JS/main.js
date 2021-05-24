@@ -130,7 +130,8 @@ const app = new Vue({
                 }
                 
             });
-        }
+        },
+
     }
 });
 
@@ -148,6 +149,9 @@ Ye = data.getFullYear();
 
 document.getElementById('date').innerHTML = Gg + Mh + Ye;
 document.getElementById('hour').innerHTML = Hh + Mm + Ss;
+
+
+
 
 
 
