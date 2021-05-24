@@ -3,7 +3,7 @@ const app = new Vue({
 
     data: {
 
-        search: null,
+        search: '',
         
         newMessage: '',
 
@@ -120,31 +120,17 @@ const app = new Vue({
                 status:'received'
             }) ,1000)   
         },
-
-        getDate() {
-            const today = new Date();
-            const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-            this.timestamp = date;
-
-            document.getElementById('date').innerHTML = this.timestamp;
-            console.log(this.timestamp);
-        },
-
-        /* filteredList() {
-            return this.contacts.filter(contacts => {
-              return contacts.name.toLowerCase().includes(this.search.toLowerCase())
-            })
-          } */
-
-          filteredList(){
-            if(this.search){
-            return this.contacts.filter((item)=>{
-              return this.search.toLowerCase().split(' ').every(v => item.name.toLowerCase().includes(v))
-            })
-            }else{
-              return this.contacts;
-            }
-          }
+    
+        cercaContatto(){
+            this.contacts.forEach(element => {
+                if(element.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    element.visible = true;
+                } else {
+                    element.visible = false;
+                }
+                
+            });
+        }
     }
 });
 

@@ -43,7 +43,7 @@
                 <!-- Person Chat -->
                 <div class="person_chat">
     
-                    <div class="user_left" @click="getDate" @click="getHour">
+                    <div class="user_left">
                         <img :src="contacts[contatto_corrente].avatar" alt="" class="avatar">
                         <div class="person">
                             <h3>{{contacts[contatto_corrente].name}}</h3>
@@ -80,7 +80,7 @@
                 <!-- Search -->
                 <div class="search">
                     <i class="fas fa-search"></i> 
-                    <input type="text" v-model="search" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" v-model="search" placeholder="Cerca o inizia una nuova chat" @keyup="cercaContatto">
                 </div>
                 <!-- Search -->
     
@@ -88,9 +88,8 @@
                 <div class="chats">
                     <div class="chat" :class="contatto_corrente === index ? 'active' : '' "
                     @click="selectContact(index)" 
-                    v-for="(contact, index) in contacts">  
-                    <!-- v-for="(contact, index) in contacts" --> 
-                    <!-- v-for="item in filteredList" -->
+                    v-for="(contact, index) in contacts"
+                    v-if= "contact.visible">
 
                         <img :src="contact.avatar" alt="Avatar Contatti" class="avatar">
                         <h2>{{contact.name}}</h2>
@@ -109,6 +108,7 @@
                     <div class="margin">
                         <div class="message_user">
                             <div class="message_right" v-if="message.status === 'sent'">
+
                                 <div class="content_message">
                                     <span>{{message.text}}</span>
                                     <i class="fas fa-chevron-down"></i>
@@ -120,6 +120,7 @@
     
                         <div class="message_answer" v-if="message.status === 'received'">
                             <div class="message_left">
+                                
                                 <div class="content_message">
                                     <span>{{message.text}}</span>
                                     <i class="fas fa-chevron-down"> </i>
