@@ -12,7 +12,7 @@ const app = new Vue({
         contacts: [
             {
                 name: 'Michele',
-                avatar: './IMG/avatar_1.jpg',
+                avatar: './ASSETS/IMG/avatar_1.jpg',
                 visible: true,
                 messages: [
                     {
@@ -34,7 +34,7 @@ const app = new Vue({
             },
             {
                 name: 'Fabio',
-                avatar: './IMG/avatar_2.jpg',
+                avatar: './ASSETS/IMG/avatar_2.jpg',
                 visible: true,
                 messages: [
                     {
@@ -56,7 +56,7 @@ const app = new Vue({
             },
             {
                 name: 'Samuele',
-                avatar: './IMG/avatar_3.jpg',
+                avatar: './ASSETS/IMG/avatar_3.jpg',
                 visible: true,
                 messages: [
                     {
@@ -78,7 +78,7 @@ const app = new Vue({
             },
             {
                 name: 'Luisa',
-                avatar: './IMG/avatar_4.jpg',
+                avatar: './ASSETS/IMG/avatar_4.jpg',
                 visible: true,
                 messages: [
                     {

@@ -171,7 +171,7 @@ body{
     position: absolute;
     top: 15%;
     right: 0;
-    background-image: url(/vue-boolzapp/Milestone_1/IMG/mine.jpg);
+    background-image: url('../IMG/mine.jpg');
     display: flex;
     justify-content: center;
     overflow: auto;
