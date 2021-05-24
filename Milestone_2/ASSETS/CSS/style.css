@@ -173,7 +173,7 @@ body{
     position: absolute;
     top: 15%;
     right: 0;
-    background-image: url('/vue-boolzapp/Milestone_2/IMG/mine.jpg');
+    background-image: url('../IMG/mine.jpg');
     justify-content: center;
     overflow: auto;
 }
