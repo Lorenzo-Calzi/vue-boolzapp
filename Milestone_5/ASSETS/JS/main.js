@@ -130,8 +130,6 @@ const app = new Vue({
             console.log(this.timestamp);
         },
 
-        
-
         cercaContatto(){
             this.contacts.forEach(element => {
                 if(element.name.toLowerCase().includes(this.search.toLowerCase())) {
@@ -142,8 +140,6 @@ const app = new Vue({
                 
             });
         }, 
-
-
         
         dayjs(){
             console.log(dayjs().format('DD/MM/YYYY'));
