@@ -28,7 +28,7 @@
                 <!-- User -->
                 <div class="user">
                     <div class="user_left" >
-                        <img class="avatar" src="./IMG/avatar_io.jpg" alt="Immagine Avatar">
+                        <img class="avatar" src="./ASSETS/IMG/avatar_io.jpg" alt="Immagine Avatar">
                         <h3>Lorenza Calzi</h3>
                     </div>
     
@@ -92,10 +92,13 @@
                         <img :src="contact.avatar" alt="" class="avatar">
                         <h2>{{contact.name}}</h2>
 
-                        <!-- <div class="content_right" v-for="message in contacts[contatto_corrente].messages">
-                                <span>{{message.text}}</span>
-                                <h5>{{message.date}}</h5>
-                        </div> -->
+
+                        <div v-for="message in contacts[contatto_corrente].messages">
+
+                            <span>{{message.text}}</span>
+                            <h5>{{message.date}}</h5>
+                        </div>
+                        
                         
                     </div>
                 </div>
@@ -106,24 +109,25 @@
             
             <!-- CONTENT -->
             <div class="content" >
-                
-                <div class="content_right" v-for="message in contacts[contatto_corrente].messages">
+                <div v-for="message in contacts[contatto_corrente].messages">
 
-                    <div class="message_user">
-                        <div class="message_right" v-if="message.status === 'sent'">
-                            <span>{{message.text}}</span>
-                            <h5>{{message.date}}</h5>
-                        </div>
-                    </div>   
+                    <div class="margin">
+                        <div class="message_user">
+                            <div class="message_right" v-if="message.status === 'sent'">
+                                <span>{{message.text}}</span>
+                                <h5>{{message.date}}</h5>
+                            </div>
+                        </div>   
+    
+                        <div class="message_answer" v-if="message.status === 'received'">
+                            <div class="message_left">
+                                <span>{{message.text}}</span>
+                                <h5>{{message.date}}</h5>
+                            </div>
+                        </div>  
+                    </div>
 
-                    <div class="message_answer" v-if="message.status === 'received'">
-                        <div class="message_left">
-                            <span>{{message.text}}</span>
-                            <h5>{{message.date}}</h5>
-                        </div>
-                    </div>  
                 </div>
-                
             </div>
             <!-- /CONTENT -->
     
