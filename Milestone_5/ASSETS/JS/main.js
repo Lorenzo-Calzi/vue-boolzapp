@@ -107,7 +107,7 @@ const app = new Vue({
             console.log(this.newMessage);
             let contattoAttivo = this.contacts[this.contatto_corrente];
             contattoAttivo.messages.push({
-                date: '10/01/2020 15:50:00',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: this.newMessage,
                 status:'sent'
             })
@@ -115,21 +115,15 @@ const app = new Vue({
 
             setTimeout(() => 
             contattoAttivo.messages.push({
-                date: '10/01/2020 15:50:00',
-                text: 'Ok',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                text: 'OK! 😄',
                 status:'received'
             }) ,1000)   
         },
 
-        getDate() {
-            const today = new Date();
-            const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-            this.timestamp = date;
-
-            document.getElementById('date').innerHTML = this.timestamp;
-            console.log(this.timestamp);
-        },
-
+        /**
+         * 
+         */
         cercaContatto(){
             this.contacts.forEach(element => {
                 if(element.name.toLowerCase().includes(this.search.toLowerCase())) {
@@ -144,7 +138,19 @@ const app = new Vue({
         dayjs(){
             console.log(dayjs().format('DD/MM/YYYY'));
             console.log(dayjs().format('HH:mm:ss'));
+        },
+
+        removeMessage(contatto_corrente, index){
+            let contattoAttivo = this.contacts[this.contatto_corrente];
+            contattoAttivo.messages.splice(index, 1)
         }
+
+
+        /* removeContact(contatto_corrente){
+            console.log('Si' + contatto_corrente);
+            this.contacts.splice(contatto_corrente, 1)
+
+        } */
     }
 });
 

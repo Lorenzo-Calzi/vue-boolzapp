@@ -43,7 +43,7 @@
                 <!-- Person Chat -->
                 <div class="person_chat">
     
-                    <div class="user_left" @click="getDate" @click="getHour">
+                    <div class="user_left">
                         <img :src="contacts[contatto_corrente].avatar" alt="" class="avatar">
                         <div class="person">
                             <h3>{{contacts[contatto_corrente].name}}</h3>
@@ -103,7 +103,7 @@
             
             <!-- CONTENT -->
             <div class="content" >
-                <div v-for="message in contacts[contatto_corrente].messages">
+                <div v-for="(message, index) in contacts[contatto_corrente].messages">
 
                     <div class="margin">
                         <div class="message_user">
@@ -128,7 +128,7 @@
                                             <div class="option">
                                                 <div class="option_text">
                                                     <strong>Message Info</strong>
-                                                    <strong>Delete Message</strong>
+                                                    <strong @click="removeMessage(contatto_corrente, index)">Delete Message</strong>
                                                 </div>
                                             </div>
                                         </div>
@@ -150,7 +150,7 @@
                                             <div class="option">
                                                 <div class="option_text">
                                                     <strong>Message Info</strong>
-                                                    <strong>Delete Message</strong>
+                                                    <strong @click="removeMessage(contatto_corrente, index)">Delete Message</strong>
                                                 </div>
                                             </div>
                                         </div>
