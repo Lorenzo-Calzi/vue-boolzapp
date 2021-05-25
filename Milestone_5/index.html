@@ -29,7 +29,7 @@
                 <div class="user">
                     <div class="user_left" >
                         <img class="avatar" src="./ASSETS/IMG/avatar_io.jpg" alt="Immagine Avatar">
-                        <h3>Lorenza Calzi</h3>
+                        <h2>Lorenza Calzi</h2>
                     </div>
     
                     <div class="user_right">
@@ -90,9 +90,18 @@
                     @click="selectContact(index)" 
                     v-for="(contact, index) in contacts"
                     v-if= "contact.visible">
-                
-                        <img :src="contact.avatar" alt="Avatar Contatti" class="avatar">
-                        <h2>{{contact.name}}</h2>
+                        
+                        <div class="preview">
+                            
+                            <img :src="contact.avatar" alt="Avatar Contatti" class="avatar">
+                            <div class= "preview_left">
+                                <h2>{{contact.name}}</h2>
+                                <h2>ok..</h2>   
+                            </div>
+                            
+                            <h2 class="chat_time">12/11/2021 08:56:37</h2>                     
+                            
+                        </div>
                         
                     </div>
                 </div>

@@ -53,6 +53,10 @@ i, img{
     align-items: center;
     padding: 10px;
 }
+.user_left h2{
+    margin: 10px;
+    font-size: 22px;
+}
 .user_left h3{
     margin: 10px;
     font-size: 22px;
@@ -168,7 +172,7 @@ i, img{
     overflow: auto;
 }
 .chat{
-    display: flex;
+    /* display: flex; */
     padding: 20px;
 }
 .chat:hover{
@@ -181,6 +185,21 @@ i, img{
 .chat h2{
     margin-left: 20px;
     font-weight: 400;
+}
+.chat_time{
+    color: rgba(182, 185, 187, 1);
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    text-align: right;
+}
+.preview{
+    display: flex;
+}
+.preview_left h2:last-child{
+    font-size: 20px;
+    padding-top: 5px;
+    color: rgba(182, 185, 187, 1);
 }
 /* /Chat */
 /* /SIDEBAR */

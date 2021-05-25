@@ -104,21 +104,24 @@ const app = new Vue({
         },
 
         addMessage() { 
-            console.log(this.newMessage);
-            let contattoAttivo = this.contacts[this.contatto_corrente];
-            contattoAttivo.messages.push({
-                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                text: this.newMessage,
-                status:'sent'
-            })
-            this.newMessage = ''
 
-            setTimeout(() => 
-            contattoAttivo.messages.push({
-                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                text: 'OK! 😄',
-                status:'received'
-            }) ,1000)   
+            if(this.newMessage.length > 0) {
+                
+                let contattoAttivo = this.contacts[this.contatto_corrente];
+                contattoAttivo.messages.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: this.newMessage,
+                    status:'sent'
+                })
+                this.newMessage = ''
+
+                setTimeout(() => 
+                contattoAttivo.messages.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: 'OK! 😄',
+                    status:'received'
+                }) ,1000)  
+            } 
         },
 
         /**
