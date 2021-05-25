@@ -124,9 +124,6 @@ const app = new Vue({
             } 
         },
 
-        /**
-         * 
-         */
         cercaContatto(){
             this.contacts.forEach(element => {
                 if(element.name.toLowerCase().includes(this.search.toLowerCase())) {
@@ -142,20 +139,11 @@ const app = new Vue({
             console.log(dayjs().format('DD/MM/YYYY'));
             console.log(dayjs().format('HH:mm:ss'));
         },
-
+    
         removeMessage(contatto_corrente, index){
             let contattoAttivo = this.contacts[this.contatto_corrente];
             contattoAttivo.messages.splice(index, 1)
         },
-
-
-        lastMessage() {
-            let lastMessageKey = this.contacts[this.contatto_corrente].messages.length - 1;
-            let lastMessage = this.contacts[this.contatto_corrente].messages[lastMessageKey].text;
-            console.log(lastMessage);
-            document.getElementById('prova').innerHTML = lastMessage;
-            /* return lastMessage */
-        }
 
         /* removeContact(contatto_corrente){
             console.log('Si' + contatto_corrente);
@@ -167,18 +155,15 @@ const app = new Vue({
 
 
 /* Calcolo Data e Ora */
-var data = new Date();
-var Hh, Mm, Ss;
-Hh = data.getHours() + ":";
-Mm = data.getMinutes() + ":";
-Ss = data.getSeconds();
+var x = dayjs().format('DD/MM/YYYY');
+console.log(x);
 
-Gg = '0' + data.getDay() + " ";
-Mh = '0' + data.getMonth() + " ";
-Ye = data.getFullYear();
+var y = dayjs().format('HH:mm:ss');
+console.log(y);
 
-document.getElementById('date').innerHTML = Gg + Mh + Ye;
-document.getElementById('hour').innerHTML = Hh + Mm + Ss;
+document.getElementById('hour').innerHTML = y;
+document.getElementById('date').innerHTML = x;
+
 
 
 

@@ -96,16 +96,10 @@
                             <img :src="contact.avatar" alt="Avatar Contatti" class="avatar">
                             <div class= "preview_left">
                                 <h2>{{contact.name}}</h2>
-
-                               <div v-for="(message, index) in contacts[contatto_corrente].messages">
-                                   
-                                    <span>{{ contact.messages[contact.messages.length -1].text }}</span>
-                                </div>
-
-                                <!-- <h2 :class="lastMessage" id="prova"></h2> -->
+                                <h2>{{ contact.messages[contact.messages.length -1].text }} ...</h2>
                             </div>
                             
-                            <h2 class="chat_time" >12/11/2021 08:56:37</h2>                     
+                            <h2 class="chat_time" >{{ contact.messages[contact.messages.length -1].date }}</h2>                     
 
                         </div>
                         

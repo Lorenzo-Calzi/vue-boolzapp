@@ -186,13 +186,6 @@ i, img{
     margin-left: 20px;
     font-weight: 400;
 }
-.chat_time{
-    color: rgba(182, 185, 187, 1);
-    font-size: 18px;
-    font-weight: 500;
-    position: absolute;
-    right: 0;
-}
 .preview{
     display: flex;
     position: relative;
@@ -202,6 +195,13 @@ i, img{
     padding-top: 5px;
     color: rgba(182, 185, 187, 1);
     width: 100%;
+}
+.chat_time{
+    color: rgba(182, 185, 187, 1);
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
 }
 /* /Chat */
 /* /SIDEBAR */
