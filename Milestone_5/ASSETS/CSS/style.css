@@ -190,16 +190,18 @@ i, img{
     color: rgba(182, 185, 187, 1);
     font-size: 18px;
     font-weight: 500;
-    width: 100%;
-    text-align: right;
+    position: absolute;
+    right: 0;
 }
 .preview{
     display: flex;
+    position: relative;
 }
 .preview_left h2:last-child{
     font-size: 20px;
     padding-top: 5px;
     color: rgba(182, 185, 187, 1);
+    width: 100%;
 }
 /* /Chat */
 /* /SIDEBAR */

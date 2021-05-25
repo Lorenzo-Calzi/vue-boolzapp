@@ -106,7 +106,7 @@ const app = new Vue({
         addMessage() { 
 
             if(this.newMessage.length > 0) {
-                
+
                 let contattoAttivo = this.contacts[this.contatto_corrente];
                 contattoAttivo.messages.push({
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
@@ -146,8 +146,16 @@ const app = new Vue({
         removeMessage(contatto_corrente, index){
             let contattoAttivo = this.contacts[this.contatto_corrente];
             contattoAttivo.messages.splice(index, 1)
-        }
+        },
 
+
+        lastMessage() {
+            let lastMessageKey = this.contacts[this.contatto_corrente].messages.length - 1;
+            let lastMessage = this.contacts[this.contatto_corrente].messages[lastMessageKey].text;
+            console.log(lastMessage);
+            document.getElementById('prova').innerHTML = lastMessage;
+            /* return lastMessage */
+        }
 
         /* removeContact(contatto_corrente){
             console.log('Si' + contatto_corrente);
