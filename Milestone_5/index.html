@@ -55,7 +55,12 @@
                     <div class="user_right">
                         <i class="fas fa-search"></i> 
                         <i class="fas fa-paperclip"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                        <div class="dropdown">
+                            <i class="fas fa-ellipsis-v"></i>
+                            <div class="dropdown-remove">
+                                <span @click="removeContact(contatto_corrente)">Elimina Chat</span>
+                            </div>
+                        </div>
                     </div>
     
                 </div>

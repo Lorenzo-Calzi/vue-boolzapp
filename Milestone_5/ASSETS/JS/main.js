@@ -196,11 +196,18 @@ const app = new Vue({
 
     methods: {
 
+        /**
+         * Funzione per selezionare il contatto attivo
+         * @param {number} index 
+         * @returns 
+         */
         selectContact(index) {
-            return this.contatto_corrente = index;
-            
+            return this.contatto_corrente = index;    
         },
 
+        /**
+         * Funzione per aggiungere un messaggio nell'thread
+         */
         addMessage() { 
 
             if(this.newMessage.length > 0) {
@@ -222,6 +229,9 @@ const app = new Vue({
             } 
         },
 
+        /**
+         * Funzione per cercare un contatto per nome
+         */
         cercaContatto(){
             this.contacts.forEach(element => {
                 if(element.name.toLowerCase().includes(this.search.toLowerCase())) {
@@ -232,17 +242,25 @@ const app = new Vue({
                 
             });
         }, 
-        
-        dayjs(){
-            console.log(dayjs().format('DD/MM/YYYY'));
-            console.log(dayjs().format('HH:mm:ss'));
-        },
     
+        /**
+         * Funzione per elimiare un messaggio
+         * @param {number} contatto_corrente 
+         * @param {number} index 
+         */
         removeMessage(contatto_corrente, index){
             let contattoAttivo = this.contacts[this.contatto_corrente];
             contattoAttivo.messages.splice(index, 1)
         },
 
+        /**
+         * Funzione per elimiare un contatto 
+         * @param {number} contatto_corrente 
+         */
+        removeContact(contatto_corrente){
+            console.log('Si' + contatto_corrente);
+            this.contacts.splice(contatto_corrente, 1) 
+        }
     }
 });
 
