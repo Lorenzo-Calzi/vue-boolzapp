@@ -205,6 +205,7 @@ const app = new Vue({
             return this.contatto_corrente = index;    
         },
 
+
         /**
          * Funzione per aggiungere un messaggio nell'thread
          */
@@ -229,6 +230,7 @@ const app = new Vue({
             } 
         },
 
+
         /**
          * Funzione per cercare un contatto per nome
          */
@@ -238,10 +240,10 @@ const app = new Vue({
                     element.visible = true;
                 } else {
                     element.visible = false;
-                }
-                
+                } 
             });
         }, 
+
     
         /**
          * Funzione per elimiare un messaggio
@@ -253,12 +255,12 @@ const app = new Vue({
             contattoAttivo.messages.splice(index, 1)
         },
 
+
         /**
          * Funzione per elimiare un contatto 
          * @param {number} contatto_corrente 
          */
         removeContact(contatto_corrente){
-            console.log('Si' + contatto_corrente);
             this.contacts.splice(contatto_corrente, 1) 
         }
     }
@@ -267,11 +269,11 @@ const app = new Vue({
 
 /* Calcolo Data e Ora */
 var x = dayjs().format('DD/MM/YYYY');
-
 var y = dayjs().format('HH:mm:ss');
 
 document.getElementById('hour').innerHTML = y;
 document.getElementById('date').innerHTML = x;
+
 
 
 

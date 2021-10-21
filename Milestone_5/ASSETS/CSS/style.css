@@ -118,9 +118,11 @@ i, img{
     color: black;
     cursor: pointer;  
 } 
+.dropdown-remove span:hover {
+    font-weight: 500;
+}
 .dropdown:hover .dropdown-remove {
     display: block;
-    transform: scale(1.1);
 }
 /* /Person Chat */
 /* /SITE TOP */
